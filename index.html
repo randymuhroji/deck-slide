@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Randy's Site</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+  <style>
+    :root {
+      --primary: #1a1440;
+      --primary-2: #4b3f8f;
+      --secondary: #7c5cff;
+      --accent: #ff7ac6;
+      --white: #ffffff;
+      --muted: rgba(255, 255, 255, 0.7);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      height: 100%;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+      background: radial-gradient(circle at 80% 0%, #2E2566 0%, var(--primary) 55%, var(--primary-2) 100%);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .glow {
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(120px);
+      opacity: 0.35;
+      z-index: 0;
+    }
+
+    .glow--1 {
+      width: 420px;
+      height: 420px;
+      background: var(--secondary);
+      top: -80px;
+      left: -80px;
+    }
+
+    .glow--2 {
+      width: 380px;
+      height: 380px;
+      background: var(--accent);
+      bottom: -100px;
+      right: -60px;
+    }
+
+    .card {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      padding: 48px 40px;
+      max-width: 560px;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 6px 16px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      font-size: clamp(2.2rem, 6vw, 3.4rem);
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 16px;
+    }
+
+    h1 span {
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    p {
+      font-size: 1.05rem;
+      color: var(--muted);
+      line-height: 1.6;
+      margin-bottom: 32px;
+    }
+
+    .actions {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      padding: 12px 28px;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.95rem;
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .btn--primary {
+      background: linear-gradient(90deg, var(--secondary), var(--accent));
+      color: var(--white);
+    }
+
+    .btn--ghost {
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: var(--white);
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 24px rgba(124, 92, 255, 0.35);
+    }
+
+    footer {
+      position: absolute;
+      bottom: 24px;
+      width: 100%;
+      text-align: center;
+      font-size: 13px;
+      color: var(--muted);
+      z-index: 1;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="glow glow--1"></div>
+  <div class="glow glow--2"></div>
+
+  <main class="card">
+    <span class="badge">Halo, Selamat Datang</span>
+    <h1>Welcome to <span>Randy's</span> Site</h1>
+    <p>Ini adalah halaman utama sederhana dari situs pribadi Randy — tempat berbagi materi, catatan, dan proyek.</p>
+    <div class="actions">
+      <a class="btn btn--primary" href="sharing-session-kitakale.html">Lihat Sharing Session</a>
+      <a class="btn btn--ghost" href="mailto:randymuhroji@gmail.com">Hubungi Saya</a>
+    </div>
+  </main>
+
+  <footer>&copy; 2026 Randy. All rights reserved.</footer>
+</body>
+
+</html>
